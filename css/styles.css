@@ -1,0 +1,318 @@
+/* Reset y estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #e0f7fa, #b9fbc0);
+    color: #1f2937;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    background: #10b981;
+    padding: 1.5rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+    position: relative;
+}
+
+.logo {
+    height: 120px;
+    animation: pulse 2s infinite;
+    position: absolute;
+    left: 2rem;
+}
+
+.logo:hover {
+    transform: scale(1.1); 
+}
+
+.titulo {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/* Navbar con diseño orbital */
+.nav-orbit {
+    position: relative;
+    background: none;
+}
+
+.nav-orbit ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 1rem 0;
+}
+
+.nav-orbit ul li {
+    margin: 0 1.5rem;
+    position: relative;
+}
+
+.nav-orbit ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.nav-orbit ul li a:hover {
+    background: #fff;
+    color: #10b981;
+    transform: scale(1.1);
+}
+
+/* Main */
+.hero {
+    display: flex; 
+    min-height: 74vh;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    padding: 1rem 1rem;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../imatges/fondo.jpg') no-repeat center center/cover;
+    opacity: 0.2;
+    z-index: -1;
+    animation: fadeIn 2s ease-in;
+}
+
+.content {
+    max-width: 1000px;
+    text-align: center;
+}
+
+.content-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #10b981;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    animation: slideIn 1s ease-out;
+}
+
+/* Grid de metas, acciones y ejemplos */
+.meta-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.meta-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease;
+}
+
+.meta-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: var(--card-color);
+}
+
+.meta-card:hover {
+    transform: translateY(-10px) rotate(2deg);
+}
+
+.meta-card h3 {
+    color: var(--card-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.meta-card p {
+    font-size: 1.1rem;
+    color: #4b5563;
+}
+
+/* Estilos para la tarjeta ODS */
+.ods-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.ods-card p {
+    font-size: 1.2rem;
+    color: #4b5563;
+    margin-bottom: 1.5rem;
+}
+
+.ods-image {
+    max-width: 100%;
+    width: 80%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin: 1.5rem auto 0;
+    display: block;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.ods-image:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos para index.html */
+.intro-text {
+    font-size: 1.3rem;
+    color: #4b5563;
+    margin: 1rem 0 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-image {
+    max-width: 300px;
+    margin: 2rem auto;
+    display: block;
+    animation: pulse 2s infinite;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #ff6f61;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #fff;
+    color: #ff6f61;
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background: #10b981;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem;
+    font-weight: 600;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #e0f7fa;
+}
+
+/* Animaciones */
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 0.2; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        position: static;
+        margin-bottom: 1rem;
+        height: 100px;
+    }
+
+    .nav-orbit ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .content-title {
+        font-size: 2rem;
+    }
+
+    .meta-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .meta-card {
+        padding: 1.5rem;
+    }
+
+    .ods-card {
+        padding: 1.5rem;
+    }
+
+    .ods-image {
+        width: 90%;
+        max-height: 300px;
+    }
+
+    .intro-text {
+        font-size: 1.1rem;
+    }
+
+    .hero-image {
+        max-width: 200px;
+    }
+}
